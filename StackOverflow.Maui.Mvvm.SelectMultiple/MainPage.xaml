@@ -5,7 +5,7 @@
              x:Class="StackOverflow.Maui.Mvvm.SelectMultiple.MainPage">
     <CollectionView ItemsSource="{Binding Persons}"
                     SelectionMode="Multiple"
-                    SelectedItems="{Binding SelectedPersons, Mode=TwoWay}"
+                    SelectedItems="{Binding SelectedPersons}"
                     SelectionChangedCommand="{Binding CheckCommand}">
         <CollectionView.ItemTemplate>
             <DataTemplate x:DataType="{x:Type local:Person}">

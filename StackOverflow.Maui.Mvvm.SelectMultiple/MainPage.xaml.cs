@@ -1,4 +1,6 @@
-﻿using System.Diagnostics;
+﻿// https://stackoverflow.com/questions/77208180/net-maui-how-to-select-single-and-multiple-items-using-mvvm-and-collectionview/77208644#77208644
+
+using System.Diagnostics;
 using System.Windows.Input;
 
 namespace StackOverflow.Maui.Mvvm.SelectMultiple;
@@ -10,11 +12,9 @@ public class Person
 
 public partial class MainPage : ContentPage
 {
-    public List<Person> Persons { get; set; } = new(
-        new string[] { "Tom", "Dick", "Harry" }
-        .Select(s => new Person() { Name = s }));
-    public IList<object> SelectedPersons { get; set; } = new List<object>();
-    public ICommand CheckCommand { get; set; }
+    public IList<Person> Persons { get; } = new List<Person>("Tom,Dick,Harry".Split(",").Select(s => new Person() { Name = s }));
+    public IList<object> SelectedPersons { get; } = new List<object>();
+    public ICommand CheckCommand { get; }      
     public MainPage()
     {
         CheckCommand = new Command(() =>
@@ -22,7 +22,6 @@ public partial class MainPage : ContentPage
             string SelectedPersonsText = string.Join(", ", SelectedPersons.Select(p => ((Person)p).Name));
             Debug.WriteLine($"SelectedPersons = [{SelectedPersons.Count}] {SelectedPersonsText}");
         });
-        OnPropertyChanged(nameof(CheckCommand));
         BindingContext = this;
         InitializeComponent();
     }
