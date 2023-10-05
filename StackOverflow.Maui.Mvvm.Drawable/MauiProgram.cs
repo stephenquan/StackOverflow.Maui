@@ -16,7 +16,6 @@ namespace StackOverflow.Maui.Mvvm.Drawable
                 });
 
             builder.Services.AddSingleton<MainPage>();
-            builder.Services.AddSingleton<MainViewModel>();
 
 #if DEBUG
             builder.Logging.AddDebug();

@@ -29,8 +29,17 @@
                 FontSize="18"
                 HorizontalOptions="Center" />
 
-            <Slider x:Name="slider" Minimum="20" Maximum="200" Value="{Binding Score, Mode=TwoWay}"/>
-            <GraphicsView WidthRequest="200" HeightRequest="200" x:Name="graphicsView" Drawable="{local:MainDrawable}"/>
+            <Slider
+                x:Name="slider"
+                Minimum="0"
+                Maximum="100"
+                Value="50" />
+            
+            <local:ScoreGuageView
+                x:Name="graphicsView"
+                WidthRequest="200"
+                HeightRequest="200"
+                Score="{Binding Value, Source={x:Reference slider}}" />
 
         </VerticalStackLayout>
     </ScrollView>

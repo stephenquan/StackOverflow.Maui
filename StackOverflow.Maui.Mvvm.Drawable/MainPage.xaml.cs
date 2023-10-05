@@ -2,11 +2,9 @@
 {
     public partial class MainPage : ContentPage
     {
-        public MainPage(MainViewModel VM)
+        public MainPage()
         {
             InitializeComponent();
-            BindingContext = VM;
-            VM.ScoreChanged += (s, e) => graphicsView.Invalidate();
         }
     }
 }
