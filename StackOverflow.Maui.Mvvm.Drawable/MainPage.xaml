@@ -32,14 +32,20 @@
             <Slider
                 x:Name="slider"
                 Minimum="0"
-                Maximum="100"
-                Value="50" />
-            
-            <local:ScoreGuageView
-                x:Name="graphicsView"
+                Maximum="5"
+                Value="4.43" />
+
+            <local:GaugeView
+                x:Name="gaugeView"
+                BindingContext="{x:Reference slider}"
                 WidthRequest="200"
                 HeightRequest="200"
-                Score="{Binding Value, Source={x:Reference slider}}" />
+                GaugeColor="Red"
+                GaugeSize="10"
+                Minimum="{Binding Minimum}"
+                Maximum="{Binding Maximum}"
+                Value="{Binding Value}"
+                />
 
         </VerticalStackLayout>
     </ScrollView>
