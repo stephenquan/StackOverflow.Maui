@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:g13n="clr-namespace:System.Globalization;assembly=System.Globalization"
+             x:Class="StackOverflow.Maui.MultiLanguage.MainPage"
+             Title="{Binding [TITLE_0001]}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="cultureTemplate" x:DataType="{x:Type g13n:CultureInfo}">
+                <Frame>
+                    <Label Text="{Binding Name}"/>
+                </Frame>
+            </DataTemplate>
+        </ResourceDictionary>
+        <Style TargetType="Frame">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup>
+                        <VisualState Name="Normal" />
+                        <VisualState Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="LightSteelBlue" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+        <Style TargetType="CollectionView">
+            <Setter Property="ItemsLayout" Value="HorizontalList"/>
+            <Setter Property="ItemsSource" Value="{Binding Languages}"/>
+            <Setter Property="ItemTemplate" Value="{StaticResource cultureTemplate}"/>
+            <Setter Property="SelectionMode" Value="Single"/>
+        </Style>
+    </ContentPage.Resources>
+    
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Label Text="{Binding [LABEL_0003]}" FontSize="Large" FontAttributes="Bold" />
+            <Label Text="{Binding [LABEL_0001]}" />
+            <CollectionView SelectedItem="{Binding DefaultCulture, Mode=TwoWay}" />
+            <Label Text="{Binding [LABEL_0004]}" FontSize="Large" FontAttributes="Bold" />
+            <Label Text="{Binding XFormLocalizer[LABEL_0002]}"/>
+            <CollectionView SelectedItem="{Binding WelcomeCulture, Mode=TwoWay}" />
+            <Label Text="{Binding [LABEL_0005]}" FontSize="Large" FontAttributes="Bold" />
+            <Label Text="{Binding FormData.Amount, StringFormat='{}{0:C}'}"/>
+            <Label Text="{Binding FormData.Amount, StringFormat='{}{0:N}'}"/>
+            <Label Text="{Binding FormData.Xmas, StringFormat='{}{0:D}'}"/>
+            <CollectionView SelectedItem="{Binding NumericCulture, Mode=TwoWay}" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+

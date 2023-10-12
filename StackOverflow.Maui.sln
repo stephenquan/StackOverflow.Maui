@@ -5,7 +5,15 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackOverflow.Maui.Mvvm.SelectMultiple", "StackOverflow.Maui.Mvvm.SelectMultiple\StackOverflow.Maui.Mvvm.SelectMultiple.csproj", "{9ADB1175-E9C5-4FBE-8D6D-62BE1360D89C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackOverflow.Maui.Mvvm.Drawable", "StackOverflow.Maui.Mvvm.Drawable\StackOverflow.Maui.Mvvm.Drawable.csproj", "{769DBA1C-F514-41C5-8BA1-1C210C239B29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackOverflow.Maui.Mvvm.Drawable", "StackOverflow.Maui.Mvvm.Drawable\StackOverflow.Maui.Mvvm.Drawable.csproj", "{769DBA1C-F514-41C5-8BA1-1C210C239B29}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackOverflow.Maui.PanZoom", "StackOverflow.Maui.PanZoom\StackOverflow.Maui.PanZoom.csproj", "{F5B5F660-4F14-47AA-9C66-FEDB0A064F18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackOverflow.Maui.DrawingOrder", "StackOverflow.Maui.DrawingOrder\StackOverflow.Maui.DrawingOrder.csproj", "{CAB24BAF-AF69-41AD-A2C2-ABB7FD66A42C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackOverflow.Maui.Picker", "StackOverflow.Maui.Picker\StackOverflow.Maui.Picker.csproj", "{EA171A2C-47F2-4832-A812-2ECA554FBDDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackOverflow.Maui.MultiLanguage", "StackOverflow.Maui.MultiLanguage\StackOverflow.Maui.MultiLanguage.csproj", "{67D4D419-9A1F-4120-994A-AA48E7A10687}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +33,30 @@ Global
 		{769DBA1C-F514-41C5-8BA1-1C210C239B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{769DBA1C-F514-41C5-8BA1-1C210C239B29}.Release|Any CPU.Build.0 = Release|Any CPU
 		{769DBA1C-F514-41C5-8BA1-1C210C239B29}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F5B5F660-4F14-47AA-9C66-FEDB0A064F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5B5F660-4F14-47AA-9C66-FEDB0A064F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5B5F660-4F14-47AA-9C66-FEDB0A064F18}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F5B5F660-4F14-47AA-9C66-FEDB0A064F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5B5F660-4F14-47AA-9C66-FEDB0A064F18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5B5F660-4F14-47AA-9C66-FEDB0A064F18}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CAB24BAF-AF69-41AD-A2C2-ABB7FD66A42C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAB24BAF-AF69-41AD-A2C2-ABB7FD66A42C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAB24BAF-AF69-41AD-A2C2-ABB7FD66A42C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CAB24BAF-AF69-41AD-A2C2-ABB7FD66A42C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAB24BAF-AF69-41AD-A2C2-ABB7FD66A42C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAB24BAF-AF69-41AD-A2C2-ABB7FD66A42C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{EA171A2C-47F2-4832-A812-2ECA554FBDDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA171A2C-47F2-4832-A812-2ECA554FBDDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA171A2C-47F2-4832-A812-2ECA554FBDDE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EA171A2C-47F2-4832-A812-2ECA554FBDDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA171A2C-47F2-4832-A812-2ECA554FBDDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA171A2C-47F2-4832-A812-2ECA554FBDDE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{67D4D419-9A1F-4120-994A-AA48E7A10687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67D4D419-9A1F-4120-994A-AA48E7A10687}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67D4D419-9A1F-4120-994A-AA48E7A10687}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{67D4D419-9A1F-4120-994A-AA48E7A10687}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67D4D419-9A1F-4120-994A-AA48E7A10687}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67D4D419-9A1F-4120-994A-AA48E7A10687}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
