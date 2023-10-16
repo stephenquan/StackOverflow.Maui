@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackOverflow.Maui.Picker",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackOverflow.Maui.MultiLanguage", "StackOverflow.Maui.MultiLanguage\StackOverflow.Maui.MultiLanguage.csproj", "{67D4D419-9A1F-4120-994A-AA48E7A10687}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackOverflow.Maui.Mvvm.AddItem", "StackOverflow.Maui.Mvvm.AddItem\StackOverflow.Maui.Mvvm.AddItem.csproj", "{DF99DE2A-F647-4960-8FD7-EDEEE0B2C64C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,12 @@ Global
 		{67D4D419-9A1F-4120-994A-AA48E7A10687}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67D4D419-9A1F-4120-994A-AA48E7A10687}.Release|Any CPU.Build.0 = Release|Any CPU
 		{67D4D419-9A1F-4120-994A-AA48E7A10687}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DF99DE2A-F647-4960-8FD7-EDEEE0B2C64C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF99DE2A-F647-4960-8FD7-EDEEE0B2C64C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF99DE2A-F647-4960-8FD7-EDEEE0B2C64C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DF99DE2A-F647-4960-8FD7-EDEEE0B2C64C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF99DE2A-F647-4960-8FD7-EDEEE0B2C64C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF99DE2A-F647-4960-8FD7-EDEEE0B2C64C}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
