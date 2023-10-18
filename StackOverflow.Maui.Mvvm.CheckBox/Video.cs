@@ -12,14 +12,8 @@ public partial class Video : ObservableObject
     [ObservableProperty]
     private bool _videoIsChecked = false;
 
-    public Video()
+    partial void OnVideoIsCheckedChanged(bool oldValue, bool newValue)
     {
-        PropertyChanged += (s, e) =>
-        {
-            if (e.PropertyName == nameof(VideoIsChecked))
-            {
-                VideoChanged?.Invoke(this, EventArgs.Empty);
-            }
-        };
+        VideoChanged?.Invoke(this, EventArgs.Empty);
     }
 }
