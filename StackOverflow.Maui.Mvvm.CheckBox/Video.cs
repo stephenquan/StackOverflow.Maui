@@ -1,30 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace StackView.Maui.Mvvm.CheckBox;
 
-public class Video : INotifyPropertyChanged
+public partial class Video : ObservableObject
 {
     public event EventHandler VideoChanged;
 
-    public int Id { get; set; }
+    [ObservableProperty]
+    private int _id;
 
+    [ObservableProperty]
     private bool _videoIsChecked = false;
-    public bool VideoIsChecked
-    {
-        get => _videoIsChecked;
-        set
-        {
-            if (_videoIsChecked == value) return;
-            _videoIsChecked = value;
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(VideoIsChecked)));
-            VideoChanged?.Invoke(this, EventArgs.Empty);
-        }
-    }
 
-    public event PropertyChangedEventHandler PropertyChanged;
+    public Video()
+    {
+        PropertyChanged += (s, e) =>
+        {
+            if (e.PropertyName == nameof(VideoIsChecked))
+            {
+                VideoChanged?.Invoke(this, EventArgs.Empty);
+            }
+        };
+    }
 }
