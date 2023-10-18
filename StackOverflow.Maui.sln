@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackOverflow.Maui.Mvvm.Add
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackOverflow.Maui.Mvvm.DisplayPrompt", "StackOverflow.Maui.Mvvm.DisplayPrompt\StackOverflow.Maui.Mvvm.DisplayPrompt.csproj", "{B6D94C9D-422B-4180-9D20-2DF9576E4650}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackView.Maui.Mvvm.CheckBox", "StackView.Maui.Mvvm.CheckBox\StackView.Maui.Mvvm.CheckBox.csproj", "{9629A774-E2E0-491D-9995-C55B880030E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackOverflow.Maui.Mvvm.CheckBox", "StackOverflow.Maui.Mvvm.CheckBox\StackOverflow.Maui.Mvvm.CheckBox.csproj", "{9629A774-E2E0-491D-9995-C55B880030E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
