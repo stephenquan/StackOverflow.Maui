@@ -9,13 +9,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackOverflow.Maui.Mvvm.Dra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackOverflow.Maui.PanZoom", "StackOverflow.Maui.PanZoom\StackOverflow.Maui.PanZoom.csproj", "{F5B5F660-4F14-47AA-9C66-FEDB0A064F18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackOverflow.Maui.DrawingOrder", "StackOverflow.Maui.DrawingOrder\StackOverflow.Maui.DrawingOrder.csproj", "{CAB24BAF-AF69-41AD-A2C2-ABB7FD66A42C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackOverflow.Maui.DrawingOrder", "StackOverflow.Maui.DrawingOrder\StackOverflow.Maui.DrawingOrder.csproj", "{CAB24BAF-AF69-41AD-A2C2-ABB7FD66A42C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackOverflow.Maui.Picker", "StackOverflow.Maui.Picker\StackOverflow.Maui.Picker.csproj", "{EA171A2C-47F2-4832-A812-2ECA554FBDDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackOverflow.Maui.Picker", "StackOverflow.Maui.Picker\StackOverflow.Maui.Picker.csproj", "{EA171A2C-47F2-4832-A812-2ECA554FBDDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackOverflow.Maui.MultiLanguage", "StackOverflow.Maui.MultiLanguage\StackOverflow.Maui.MultiLanguage.csproj", "{67D4D419-9A1F-4120-994A-AA48E7A10687}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackOverflow.Maui.MultiLanguage", "StackOverflow.Maui.MultiLanguage\StackOverflow.Maui.MultiLanguage.csproj", "{67D4D419-9A1F-4120-994A-AA48E7A10687}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackOverflow.Maui.Mvvm.AddItem", "StackOverflow.Maui.Mvvm.AddItem\StackOverflow.Maui.Mvvm.AddItem.csproj", "{DF99DE2A-F647-4960-8FD7-EDEEE0B2C64C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackOverflow.Maui.Mvvm.AddItem", "StackOverflow.Maui.Mvvm.AddItem\StackOverflow.Maui.Mvvm.AddItem.csproj", "{DF99DE2A-F647-4960-8FD7-EDEEE0B2C64C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackOverflow.Maui.Mvvm.DisplayPrompt", "StackOverflow.Maui.Mvvm.DisplayPrompt\StackOverflow.Maui.Mvvm.DisplayPrompt.csproj", "{B6D94C9D-422B-4180-9D20-2DF9576E4650}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackView.Maui.Mvvm.CheckBox", "StackView.Maui.Mvvm.CheckBox\StackView.Maui.Mvvm.CheckBox.csproj", "{9629A774-E2E0-491D-9995-C55B880030E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +69,18 @@ Global
 		{DF99DE2A-F647-4960-8FD7-EDEEE0B2C64C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF99DE2A-F647-4960-8FD7-EDEEE0B2C64C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DF99DE2A-F647-4960-8FD7-EDEEE0B2C64C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B6D94C9D-422B-4180-9D20-2DF9576E4650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6D94C9D-422B-4180-9D20-2DF9576E4650}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6D94C9D-422B-4180-9D20-2DF9576E4650}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B6D94C9D-422B-4180-9D20-2DF9576E4650}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6D94C9D-422B-4180-9D20-2DF9576E4650}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6D94C9D-422B-4180-9D20-2DF9576E4650}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{9629A774-E2E0-491D-9995-C55B880030E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9629A774-E2E0-491D-9995-C55B880030E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9629A774-E2E0-491D-9995-C55B880030E2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9629A774-E2E0-491D-9995-C55B880030E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9629A774-E2E0-491D-9995-C55B880030E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9629A774-E2E0-491D-9995-C55B880030E2}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
