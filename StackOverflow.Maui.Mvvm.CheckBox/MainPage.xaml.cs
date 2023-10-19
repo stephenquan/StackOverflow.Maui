@@ -16,6 +16,10 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         BindingContext = this;
         for (int i = 0; i < VideoList.Count; i++)
-            VideoList[i].PropertyChanged += (s,e) => OnPropertyChanged(nameof(SelectedVideos));
+            VideoList[i].PropertyChanged += (s, e) =>
+            {
+                if (e.PropertyName == nameof(Video.VideoIsChecked))
+                    OnPropertyChanged(nameof(SelectedVideos));
+            };
     }
 }
