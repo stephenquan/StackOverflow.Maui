@@ -7,30 +7,26 @@
     <ScrollView Margin="25">
         <VerticalStackLayout Spacing="25">
 
-            <ListView ItemsSource="{Binding VideoList}">
-                <ListView.ItemTemplate>
+            <CollectionView ItemsSource="{Binding VideoList}">
+                <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="local:Video">
-                        <ViewCell>
-                            <HorizontalStackLayout>
-                                <Label Text="{Binding Id, StringFormat='Video Id: {0}'}" VerticalOptions="Center" />
-                                <CheckBox IsChecked="{Binding VideoIsChecked, Mode=TwoWay}"  VerticalOptions="Center" />
-                            </HorizontalStackLayout>
-                        </ViewCell>
+                        <HorizontalStackLayout>
+                            <Label Text="{Binding Id, StringFormat='Video Id: {0}'}" VerticalOptions="Center" />
+                            <CheckBox IsChecked="{Binding VideoIsChecked, Mode=TwoWay}"  VerticalOptions="Center" />
+                        </HorizontalStackLayout>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
             <Label Text="{Binding SelectedVideos.Count, StringFormat='Selected Videos: {0}'} "/>
 
-            <ListView ItemsSource="{Binding SelectedVideos}">
-                <ListView.ItemTemplate>
+            <CollectionView ItemsSource="{Binding SelectedVideos}">
+                <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="local:Video">
-                        <ViewCell>
-                            <Label Text="{Binding Id, StringFormat='Selected Video Id: {0}'}"/>
-                        </ViewCell>
+                        <Label Text="{Binding Id, StringFormat='Selected Video Id: {0}'}"/>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
         </VerticalStackLayout>
     </ScrollView>
