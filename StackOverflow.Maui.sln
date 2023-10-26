@@ -23,7 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackOverflow.Maui.Mvvm.Che
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackOverflow.Maui.Mvvm.Initializer", "StackOverflow.Maui.Mvvm.Initializer\StackOverflow.Maui.Mvvm.Initializer.csproj", "{6C26CC83-42B7-4C0B-B549-5B58F73FA11D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackOverflow.Maui.SyncAccess", "StackOverflow.Maui.SyncAccess\StackOverflow.Maui.SyncAccess.csproj", "{3871BBBE-BDD7-42AC-A4DD-418A1D06CAAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackOverflow.Maui.SyncAccess", "StackOverflow.Maui.SyncAccess\StackOverflow.Maui.SyncAccess.csproj", "{3871BBBE-BDD7-42AC-A4DD-418A1D06CAAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{75CDE803-6A22-4024-8AA2-008996454FED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackOverflow.Maui.Mvvm.RadioButton", "StackOverflow.Maui.Mvvm.RadioButton\StackOverflow.Maui.Mvvm.RadioButton.csproj", "{A0DAE252-709E-426C-9290-D40F2AC225AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,6 +101,12 @@ Global
 		{3871BBBE-BDD7-42AC-A4DD-418A1D06CAAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3871BBBE-BDD7-42AC-A4DD-418A1D06CAAF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3871BBBE-BDD7-42AC-A4DD-418A1D06CAAF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A0DAE252-709E-426C-9290-D40F2AC225AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0DAE252-709E-426C-9290-D40F2AC225AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0DAE252-709E-426C-9290-D40F2AC225AB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A0DAE252-709E-426C-9290-D40F2AC225AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0DAE252-709E-426C-9290-D40F2AC225AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0DAE252-709E-426C-9290-D40F2AC225AB}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

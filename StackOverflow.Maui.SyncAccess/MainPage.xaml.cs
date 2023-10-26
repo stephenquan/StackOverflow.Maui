@@ -19,9 +19,27 @@ public partial class MainPage : ContentPage
         await MainThread.InvokeOnMainThreadAsync(() =>
         {
             Debug.WriteLine($"Step 2: MainThread: {Thread.CurrentThread.ManagedThreadId}"); // Step 2: MainThread: 1
+            mylabel.Text = mystringvar + " (Step 2)";
+        });
+        await Task.Delay(500);
+        await MainThread.InvokeOnMainThreadAsync(() =>
+        {
+            Debug.WriteLine($"Step 3: MainThread: {Thread.CurrentThread.ManagedThreadId}"); // Step 3: MainThread: 1
+            mylabel.Text = mystringvar + " (Step 3)"; ;
+        });
+        await Task.Delay(500);
+        await MainThread.InvokeOnMainThreadAsync(() =>
+        {
+            Debug.WriteLine($"Step 4: MainThread: {Thread.CurrentThread.ManagedThreadId}"); // Step 4: MainThread: 1
+            mylabel.Text = mystringvar + " (Step 4)"; ;
+        });
+        await Task.Delay(500);
+        await MainThread.InvokeOnMainThreadAsync(() =>
+        {
+            Debug.WriteLine($"Step 5: MainThread: {Thread.CurrentThread.ManagedThreadId}"); // Step 5: MainThread: 1
             mylabel.Text = mystringvar;
         });
-        Debug.WriteLine($"Step 3: MyThread: {Thread.CurrentThread.ManagedThreadId}"); // Step 3: MyThread: 10
+        Debug.WriteLine($"Step 6: MyThread: {Thread.CurrentThread.ManagedThreadId}"); // Step 6: MyThread: 10
         mystringvar = "WHAT I GOT (NOT!)";
     }
 }
