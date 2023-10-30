@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:g="clr-namespace:System.Globalization;assembly=mscorlib"
+             x:Class="StackOverflow.Maui.Mvvm.CultureInfoFlag.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <CollectionView ItemSizingStrategy="MeasureAllItems"
+                ItemsSource="{Binding Languages}"
+                SelectedItem="{Binding SelectedLanguage, Mode=TwoWay}"
+                SelectionMode="Single">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="g:CultureInfo">
+                        <ContentView Padding="5" >
+                            <Grid ColumnDefinitions="90,*">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40" />
+                                </Grid.RowDefinitions>
+                                <Image Source="{Binding LCID, StringFormat='flag_{0}.png'}" Grid.Column="0"
+                                       WidthRequest="60"
+                                       HeightRequest="40"
+                                       HorizontalOptions="Start" />
+                                <Label Text="{Binding NativeName}" Grid.Column="1" HorizontalOptions="Start" />
+                            </Grid>
+                        </ContentView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label Text="{Binding SelectedLanguage.NativeName, StringFormat='Selected Language: {0}'}"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
