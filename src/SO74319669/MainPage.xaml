@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SO74319669.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SO74319669">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <Slider x:Name="slider" Maximum="1" />
+            <Label Text="{Binding Value, x:DataType='Slider', Source={x:Reference slider}}" />
+            <BoxView
+                HeightRequest="200"
+                WidthRequest="200"
+                Color="{local:RgbColor A='0.5',
+                                       B='0.0',
+                                       G='0.0',
+                                       R={Binding Value,
+                                                  x:DataType='Slider',
+                                                  Source={x:Reference slider}}}" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
