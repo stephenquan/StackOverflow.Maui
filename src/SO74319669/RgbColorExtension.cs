@@ -21,6 +21,7 @@ public partial class RgbColorExtension : BindableObject, IMarkupExtension<Bindin
 	/// <param name="serviceProvider"></param>
 	/// <returns></returns>
 	public object ProvideValue(IServiceProvider serviceProvider) => (this as IMarkupExtension<BindingBase>).ProvideValue(serviceProvider);
+
 	BindingBase IMarkupExtension<BindingBase>.ProvideValue(IServiceProvider serviceProvider)
 	{
 		if (serviceProvider.GetService(typeof(IProvideValueTarget)) is IProvideValueTarget provideValueTarget && provideValueTarget.TargetObject is BindableObject targetObject)
