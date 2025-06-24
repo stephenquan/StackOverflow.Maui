@@ -4,8 +4,8 @@ namespace SO74319669;
 
 /// <summary>Provides a markup extension for creating a color binding based on RGB values.</summary>
 [ContentProperty(nameof(R))]
-[AcceptEmptyServiceProvider]
-public partial class RgbColorExtension : BindableObject, IMarkupExtension<BindingBase>
+[RequireService([typeof(IReferenceProvider), typeof(IProvideValueTarget)])]
+public partial class RgbColorExtension : Element, IMarkupExtension<BindingBase>
 {
 	/// <summary>Gets or sets the red component of the color.</summary>
 	[BindableProperty, NotifyPropertyChangedFor(nameof(Color))] public partial float R { get; set; } = 0.0f;
@@ -21,5 +21,12 @@ public partial class RgbColorExtension : BindableObject, IMarkupExtension<Bindin
 	/// <param name="serviceProvider"></param>
 	/// <returns></returns>
 	public object ProvideValue(IServiceProvider serviceProvider) => (this as IMarkupExtension<BindingBase>).ProvideValue(serviceProvider);
-	BindingBase IMarkupExtension<BindingBase>.ProvideValue(IServiceProvider serviceProvider) => BindingBase.Create(static (RgbColorExtension t) => t.Color, BindingMode.OneWay, source: this);
+	BindingBase IMarkupExtension<BindingBase>.ProvideValue(IServiceProvider serviceProvider)
+	{
+		if (serviceProvider.GetService(typeof(IProvideValueTarget)) is IProvideValueTarget provideValueTarget && provideValueTarget.TargetObject is Element targetElement)
+		{
+			this.SetBinding(Element.BindingContextProperty, static (Element t) => t.BindingContext, BindingMode.OneWay, source: targetElement);
+		}
+		return BindingBase.Create(static (RgbColorExtension t) => t.Color, BindingMode.OneWay, source: this);
+	}
 }
