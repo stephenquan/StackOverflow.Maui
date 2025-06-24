@@ -9,14 +9,17 @@
     <ScrollView>
         <VerticalStackLayout Padding="30,0" Spacing="25">
             <Slider
+                Maximum="126"
+                Minimum="32"
+                Value="{Binding IconNameCode, Mode=TwoWay}" />
+            <Slider
                 Maximum="128"
                 Minimum="1"
                 Value="{Binding IconSize, Mode=TwoWay}" />
-
             <Image
                 BackgroundColor="Green"
                 HeightRequest="{Binding IconSize}"
-                Source="{local:FontImage 'A',
+                Source="{local:FontImage {Binding IconName},
                                          Color=White,
                                          FontFamily='OpenSansRegular',
                                          Size={Binding IconSize}}"

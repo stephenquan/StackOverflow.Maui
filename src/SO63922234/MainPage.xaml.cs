@@ -6,6 +6,8 @@ namespace SO63922234;
 
 public partial class MainPage : ContentPage
 {
+	[ObservableProperty, NotifyPropertyChangedFor(nameof(IconName))] public partial int IconNameCode { get; set; } = 65;
+	public string IconName => ((char)IconNameCode).ToString();
 	[ObservableProperty] public partial double IconSize { get; set; } = 30.0;
 
 	public MainPage()
