@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SO79689989.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:coll="clr-namespace:System.Collections;assembly=System.Collections.NonGeneric"
+    xmlns:coll2="clr-namespace:System.Collections.Concurrent;assembly=System.Collections.Concurrent"
+    xmlns:coll3="clr-namespace:System.Collections.Generic;assembly=System.Core"
+    xmlns:coll4="clr-namespace:System.Collections.Immutable;assembly=System.Collections.Immutable"
+    xmlns:coll5="clr-namespace:System.Collections.ObjectModel;assembly=WindowsBase"
+    xmlns:coll6="using System.Private.CoreLib"
+    xmlns:local="clr-namespace:SO79689989"
+    xmlns:sysrun="clr-namespace:System.Runtime;assembly=netstandard"
+    x:Name="this"
+    x:DataType="local:MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+
+            <Border Padding="5">
+                <Label Text="{Binding LetsTry[0]}" />
+            </Border>
+
+            <!--
+            <Border Padding="5" BackgroundColor="Orange">
+                <Label Text="{Binding LetsTry[0].[0]}" />
+            </Border>
+            -->
+
+            <Border Padding="5" BackgroundColor="PaleGreen">
+                <Grid x:DataType="{x:Null}" BindingContext="{Binding LetsTry[0], x:DataType='local:MainPage', Source={x:Reference this}}">
+                    <Label Text="{Binding [0]}" />
+                </Grid>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

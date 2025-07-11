@@ -72,6 +72,7 @@
                                                                    A={Binding AlphaValue}}}"
                     WidthRequest="{Binding IconSize}" />
             </Border>
+
         </VerticalStackLayout>
     </ScrollView>
 
