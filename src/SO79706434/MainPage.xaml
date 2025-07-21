@@ -6,6 +6,7 @@
 
     <Grid RowDefinitions="*,Auto">
 
+        <!--  Insert here your main body at Grid.Row="0"  -->
         <ScrollView>
             <VerticalStackLayout Padding="30,0" Spacing="25">
                 <Image
@@ -34,42 +35,39 @@
             </VerticalStackLayout>
         </ScrollView>
 
+        <!--  Implement navigation bar with floating button  -->
         <Grid Grid.Row="1">
+            <!--  Implement a navigation bar  -->
             <Border VerticalOptions="End">
-                <Grid ColumnDefinitions="*,*,2*,*,*">
-                    <Button
-                        Grid.Column="0"
-                        BackgroundColor="Transparent"
-                        FontSize="32"
-                        HorizontalOptions="Center"
-                        Text="🏠" />
-                    <Button
-                        Grid.Column="1"
-                        BackgroundColor="Transparent"
-                        FontSize="32"
-                        HorizontalOptions="Center"
-                        Text="🔍" />
-                    <Button
-                        Grid.Column="3"
-                        BackgroundColor="Transparent"
-                        FontSize="32"
-                        HorizontalOptions="Center"
-                        Text="💬" />
-                    <Button
-                        Grid.Column="4"
-                        BackgroundColor="Transparent"
-                        FontSize="32"
-                        HorizontalOptions="Center"
-                        Text="👤" />
+                <Grid Padding="0,10,0,10" ColumnDefinitions="*,*,2*,*,*">
+                    <Grid.Resources>
+                        <ResourceDictionary>
+                            <Style TargetType="Button">
+                                <Setter Property="Padding" Value="0" />
+                                <Setter Property="BorderWidth" Value="0" />
+                                <Setter Property="BackgroundColor" Value="Transparent" />
+                                <Setter Property="FontSize" Value="32" />
+                                <Setter Property="HorizontalOptions" Value="Center" />
+                            </Style>
+                        </ResourceDictionary>
+                    </Grid.Resources>
+                    <Button Grid.Column="0" Text="🏠" />
+                    <Button Grid.Column="1" Text="🔍" />
+                    <Button Grid.Column="3" Text="💬" />
+                    <Button Grid.Column="4" Text="👤" />
                 </Grid>
             </Border>
+
+            <!--  This is your floating central button because it is in the same Grid cell  -->
             <Grid Padding="10">
                 <Button
-                    Grid.Column="2"
+                    BackgroundColor="White"
+                    BorderWidth="2"
                     CornerRadius="35"
                     HeightRequest="70"
                     HorizontalOptions="Center"
                     Text="+"
+                    TextColor="Black"
                     VerticalOptions="End"
                     WidthRequest="70" />
             </Grid>
