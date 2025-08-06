@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SO79726492.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SO79726492"
+    Title="JSON"
+    x:DataType="local:JSONEditorViewModel"
+    BackgroundColor="DarkBlue">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PrimaryButtonColour">SkyBlue</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Editor
+            x:Name="JSONEditorComponent"
+            AutoSize="TextChanges"
+            BackgroundColor="transparent"
+            FontFamily="Monaco"
+            FontSize="17"
+            HorizontalOptions="Fill"
+            IsSpellCheckEnabled="False"
+            IsTextPredictionEnabled="False"
+            Text="{Binding Text, Mode=TwoWay}"
+            TextColor="{Binding FormattingColour}"
+            VerticalOptions="Fill" />
+        <Button
+            Padding="25"
+            BackgroundColor="#292929"
+            Command="{Binding FormatAndValidateCommand}"
+            FontSize="18"
+            IsVisible="{Binding IsJsonValidatorEnabled}"
+            Text="Validate &amp; Beautify JSON"
+            TextColor="{StaticResource PrimaryButtonColour}" />
+    </StackLayout>
+
+</ContentPage>
