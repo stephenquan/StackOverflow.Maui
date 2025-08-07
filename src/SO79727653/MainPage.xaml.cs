@@ -4,14 +4,14 @@ using CommunityToolkit.Maui.Extensions;
 namespace SO79727653;
 
 /// <summary>
-/// 
+/// Demonstrates a simple Maui app with a button that opens a picker control view.
 /// </summary>
 public partial class MainPage : ContentPage
 {
 	int count = 0;
 
 	/// <summary>
-	/// 
+	/// Initializes a new instance of the <see cref="MainPage"/> class.
 	/// </summary>
 	public MainPage()
 	{
@@ -19,7 +19,7 @@ public partial class MainPage : ContentPage
 	}
 
 	/// <summary>
-	/// 
+	/// Button click handler that also demonstrates a language picker using the picker control view.
 	/// </summary>
 	/// <param name="sender"></param>
 	/// <param name="e"></param>
@@ -33,8 +33,6 @@ public partial class MainPage : ContentPage
 			new CultureInfo("fr-FR"),
 			new CultureInfo("de-DE"),
 		];
-
-		await Task.Delay(1);
 
 		var popup = new PickerControlView<CultureInfo>
 		{
@@ -53,7 +51,7 @@ public partial class MainPage : ContentPage
 			}),
 		};
 
-		var result = await this.ShowPopupAsync<CultureInfo>(popup);
+		CommunityToolkit.Maui.Core.IPopupResult<CultureInfo> result = await this.ShowPopupAsync<CultureInfo>(popup);
 
 		if (result.WasDismissedByTappingOutsideOfPopup)
 		{
