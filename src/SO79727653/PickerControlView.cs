@@ -1,3 +1,5 @@
+using CommunityToolkit.Maui.Markup;
+
 namespace SO79727653;
 
 /// <summary>
@@ -41,34 +43,15 @@ public partial class PickerControlView<T> : CommunityToolkit.Maui.Views.Popup<T>
 	/// </summary>
 	public PickerControlView()
 	{
-		CollectionView clPickerView = new CollectionView();
-
-		clPickerView.SelectionMode = SelectionMode.Single;
-
-		clPickerView.SetBinding(
-			CollectionView.ItemsSourceProperty,
-			new Binding(
-				nameof(ItemsSource),
-				BindingMode.OneWay,
-				source: this));
-
-		clPickerView.SetBinding(
-			CollectionView.ItemTemplateProperty,
-			new Binding(
-				nameof(ItemTemplate),
-				BindingMode.OneWay,
-				source: this));
+		CollectionView clPickerView = new CollectionView { SelectionMode = SelectionMode.Single }
+			.Bind(CollectionView.ItemsSourceProperty, nameof(ItemsSource), BindingMode.OneWay, source: this)
+			.Bind(CollectionView.ItemTemplateProperty, nameof(ItemTemplate), BindingMode.OneWay, source: this);
 
 		clPickerView.SelectionChanged += async (s, e) =>
 		{
-			if (e.CurrentSelection is not null
-				&& e.CurrentSelection.Count >= 1
-				&& e.CurrentSelection[0] is T selectedItem)
+			if (e.CurrentSelection is not null && e.CurrentSelection.Count >= 1 && e.CurrentSelection[0] is T selectedItem)
 			{
-				await this.Dispatcher.DispatchAsync(async () =>
-				{
-					await this.CloseAsync(selectedItem);
-				});
+				await this.Dispatcher.DispatchAsync(async () => await this.CloseAsync(selectedItem));
 			}
 		};
 

@@ -1,5 +1,6 @@
 ﻿using System.Globalization;
 using CommunityToolkit.Maui.Extensions;
+using CommunityToolkit.Maui.Markup;
 
 namespace SO79727653;
 
@@ -36,12 +37,8 @@ public partial class MainPage : ContentPage
 				new CultureInfo("de-DE"),
 			},
 			ItemTemplate = new DataTemplate(() =>
-			{
-				Label label = new Label();
-				label.HeightRequest = 40;
-				label.SetBinding(Label.TextProperty, "DisplayName");
-				return label;
-			}),
+				new Label { HeightRequest = 40 }.Bind(Label.TextProperty, "DisplayName")
+			),
 		};
 
 		CommunityToolkit.Maui.Core.IPopupResult<CultureInfo> result = await this.ShowPopupAsync<CultureInfo>(popup);
