@@ -27,13 +27,6 @@ public partial class MainPage : ContentPage
 	{
 		count++;
 
-		List<CultureInfo> cultures =
-		[
-			new CultureInfo("en-US"),
-			new CultureInfo("fr-FR"),
-			new CultureInfo("de-DE"),
-		];
-
 		var popup = new PickerControlView<CultureInfo>
 		{
 			ItemsSource = new List<CultureInfo>()
