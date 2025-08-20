@@ -14,7 +14,7 @@ public partial class MainViewModel : ObservableObject
 	[ObservableProperty]
 	public partial float[]? DataHolder { get; set; }
 
-	Random rand = new Random();
+	static Random rand = new Random();
 
 	/// <summary>
 	/// Refreshes the data by generating a new set of random floating-point values.
