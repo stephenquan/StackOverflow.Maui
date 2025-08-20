@@ -22,11 +22,14 @@ public partial class MainViewModel : ObservableObject
 	[RelayCommand]
 	public void Refresh()
 	{
+		/*
 		float[] temp = new float[100];
 		for (int i = 0; i < 100; i++)
 		{
 			temp[i] = rand.NextSingle();
 		}
 		DataHolder = temp;
+		*/
+		DataHolder = Enumerable.Range(0, 100).Select(i => rand.NextSingle()).ToArray();
 	}
 }
