@@ -58,7 +58,11 @@ public partial class MyGraphicsView : GraphicsView, IDrawable
 		{
 			for (int i = 0; i < Data.Length - 1; i++)
 			{
-				canvas.DrawLine(5 * i, 100 * Data[i], 5 * (i + 1), 100 * Data[i + 1]);
+				canvas.DrawLine(
+					(float)(i * this.Width / Data.Length),
+					(float)(Data[i] * this.Height),
+					(float)((i + 1) * this.Width / Data.Length),
+					(float)(Data[i + 1] * this.Height));
 			}
 		}
 	}
