@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SO79745777.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SO79745777"
+    x:DataType="local:MainViewModel">
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <local:MessageView Command="{Binding SendMessageCommand}" Message="{Binding Message, Mode=TwoWay}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
