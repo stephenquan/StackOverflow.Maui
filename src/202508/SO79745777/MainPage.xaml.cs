@@ -14,7 +14,6 @@ public partial class MainPage : ContentPage
 	public MainPage(MainViewModel vm)
 	{
 		BindingContext = vm;
-		vm.SendMessageEvent += (s, e) => DisplayAlert("Message", e.Message, "OK");
 		InitializeComponent();
 	}
 }

@@ -25,6 +25,7 @@ public static class MauiProgram
 
 		builder.Services.AddTransient<MainPage>();
 		builder.Services.AddTransient<MainViewModel>();
+		builder.Services.AddTransient<IMessageService, DefaultMessageService>();
 
 		return builder.Build();
 	}
