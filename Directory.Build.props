@@ -22,13 +22,13 @@
     <NuGetAuditMode>all</NuGetAuditMode>
     
     <!-- 3rd party Packages -->
-    <CommunityToolkitMauiVersion>12.0.0</CommunityToolkitMauiVersion>
+    <CommunityToolkitMauiVersion>12.2.0</CommunityToolkitMauiVersion>
     <CommunityToolkitMauiMarkupVersion>6.0.1</CommunityToolkitMauiMarkupVersion>
     <CommunityToolkitMvvmVersion>8.4.0</CommunityToolkitMvvmVersion>
     <SQuanHelpersMauiMvvmVersion>1.0.13</SQuanHelpersMauiMvvmVersion>
     
     <!-- MAUI Specific -->
-    <MauiPackageVersion>9.0.90</MauiPackageVersion>
+    <MauiPackageVersion>9.0.100</MauiPackageVersion>
     <MauiVersion>$(MauiPackageVersion)</MauiVersion>
     <NextMauiPackageVersion>10.0.0</NextMauiPackageVersion>
     <MauiStrictXamlCompilation>true</MauiStrictXamlCompilation>
