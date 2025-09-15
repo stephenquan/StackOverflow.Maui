@@ -10,14 +10,14 @@ public partial class MyGraphicsView : GraphicsView, IDrawable
 	/// <summary>
 	/// Gets or sets the array of floating-point values associated with the data.
 	/// </summary>
-	[BindableProperty]
-	public partial float[]? Data { get; set; }
+	[BindableProperty] public partial float[]? Data { get; set; }
+	partial void OnDataChanged(float[]? oldValue, float[]? newValue) => Invalidate();
 
 	/// <summary>
 	/// Gets or sets the color used for stroking lines in the graphics view.
 	/// </summary>
-	[BindableProperty]
-	public partial Color StrokeColor { get; set; } = Colors.Red;
+	[BindableProperty] public partial Color StrokeColor { get; set; } = Colors.Red;
+	partial void OnStrokeColorChanged(Color oldValue, Color newValue) => Invalidate();
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="MyGraphicsView"/> class.
@@ -25,16 +25,6 @@ public partial class MyGraphicsView : GraphicsView, IDrawable
 	public MyGraphicsView()
 	{
 		Drawable = this;
-		PropertyChanged += (s, e) =>
-		{
-			switch (e.PropertyName)
-			{
-				case nameof(Data):
-				case nameof(StrokeColor):
-					Invalidate();
-					break;
-			}
-		};
 	}
 
 	/// <summary>
