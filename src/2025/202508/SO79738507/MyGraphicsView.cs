@@ -1,4 +1,6 @@
-﻿namespace SO79738507;
+﻿using SQuan.Helpers.Maui.Mvvm;
+
+namespace SO79738507;
 
 /// <summary>
 /// Custom graphics view that implements IDrawable to draw a line graph based on float data.
@@ -6,36 +8,16 @@
 public partial class MyGraphicsView : GraphicsView, IDrawable
 {
 	/// <summary>
-	/// Identifies the bindable property for the <see cref="Data"/> property.
-	/// </summary>
-	public static readonly BindableProperty DataProperty =
-		BindableProperty.Create(nameof(Data), typeof(float[]), typeof(MyGraphicsView),
-			propertyChanged: (b, o, n) => ((MyGraphicsView)(b)).Invalidate());
-
-	/// <summary>
 	/// Gets or sets the array of floating-point values associated with the data.
 	/// </summary>
-	public float[]? Data
-	{
-		get => (float[]?)GetValue(DataProperty);
-		set => SetValue(DataProperty, value);
-	}
-
-	/// <summary>
-	/// Identifies the bindable property for the stroke color of the graphics view.
-	/// </summary>
-	public static readonly BindableProperty StrokeColorProperty =
-		BindableProperty.Create(nameof(StrokeColor), typeof(Color), typeof(MyGraphicsView), Colors.Red,
-			propertyChanged: (b, o, n) => ((MyGraphicsView)(b)).Invalidate());
+	[BindableProperty]
+	public partial float[]? Data { get; set; }
 
 	/// <summary>
 	/// Gets or sets the color used for stroking lines in the graphics view.
 	/// </summary>
-	public Color StrokeColor
-	{
-		get => (Color)GetValue(StrokeColorProperty);
-		set => SetValue(StrokeColorProperty, value);
-	}
+	[BindableProperty]
+	public partial Color StrokeColor { get; set; } = Colors.Red;
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="MyGraphicsView"/> class.
@@ -43,6 +25,16 @@ public partial class MyGraphicsView : GraphicsView, IDrawable
 	public MyGraphicsView()
 	{
 		Drawable = this;
+		PropertyChanged += (s, e) =>
+		{
+			switch (e.PropertyName)
+			{
+				case nameof(Data):
+				case nameof(StrokeColor):
+					Invalidate();
+					break;
+			}
+		};
 	}
 
 	/// <summary>
