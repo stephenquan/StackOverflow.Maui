@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SO63922234.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:StackOverflow.Maui.App"
+    xmlns:so63922234="clr-namespace:SO63922234"
+    Title="{Binding SelectedSample.TitleText, Source={x:Static local:AppViewModel.Current}, x:DataType='local:AppViewModel'}"
+    x:DataType="so63922234:MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="25">
+            <Label FormattedText="{Binding SelectedSample.LinkText, Source={x:Static local:AppViewModel.Current}, x:DataType='local:AppViewModel'}" />
+
+            <Label Text="{Binding IconNameCode, StringFormat='IconNameCode: {0}'}" />
+            <Slider
+                Maximum="126"
+                Minimum="32"
+                Value="{Binding IconNameCode, Mode=TwoWay}" />
+            <Label Text="{Binding IconSize, StringFormat='IconSize: {0}'}" />
+            <Slider
+                Maximum="128"
+                Minimum="1"
+                Value="{Binding IconSize, Mode=TwoWay}" />
+            <Image
+                BackgroundColor="Green"
+                HeightRequest="{Binding IconSize}"
+                Source="{so63922234:FontImage {Binding IconName},
+                                              Color=White,
+                                              FontFamily='OpenSansRegular',
+                                              Size={Binding IconSize}}"
+                WidthRequest="{Binding IconSize}" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
