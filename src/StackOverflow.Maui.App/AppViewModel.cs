@@ -28,13 +28,14 @@ public partial class AppViewModel : ObservableObject
 	/// </summary>
 	/// <param name="id">The id associated with the sample. This cannot be null or empty.</param>
 	/// <param name="created">The creation date of the StackOverflow question associated with the sample.</param>
+	/// <param name="answered">The date when the question was answered.</param>
 	/// <param name="route">The route associated with the sample. This cannot be null or empty.</param>
 	/// <param name="routeType">The type of the route, represented as a <see cref="Type"/>. This cannot be null.</param>
 	/// <param name="snippet">A short description of the sample. This cannot be null or empty.</param>
 	/// <param name="description">A long description of the sample. This cannot be null or empty.</param>
-	public void RegisterSample(string id, DateTime created, string route, Type routeType, string snippet, string description)
+	public void RegisterSample(string id, DateTime created, DateTime answered, string route, Type routeType, string snippet, string description)
 	{
-		Samples.Add(new Sample(id, created, route, routeType, snippet, description));
+		Samples.Add(new Sample(id, created, answered, route, routeType, snippet, description));
 		Routing.RegisterRoute(route, routeType);
 	}
 }

@@ -16,6 +16,11 @@ public class Sample
 	public DateTime Created { get; set; }
 
 	/// <summary>
+	/// Gets or sets when the question was answered.
+	/// </summary>
+	public DateTime Answered { get; set; }
+
+	/// <summary>
 	/// Gets or sets the route of the sample.
 	/// </summary>
 	public string Route { get; set; } = string.Empty;
@@ -70,14 +75,16 @@ public class Sample
 	/// </summary>
 	/// <param name="id"></param>
 	/// <param name="created"></param>
+	/// <param name="answered"></param>"
 	/// <param name="route"></param>
 	/// <param name="routeType"></param>
 	/// <param name="snippet"></param>
 	/// <param name="description"></param>
-	public Sample(string id, DateTime created, string route, Type routeType, string snippet, string description)
+	public Sample(string id, DateTime created, DateTime answered, string route, Type routeType, string snippet, string description)
 	{
 		Id = id;
 		Created = created;
+		Answered = answered;
 		Route = route;
 		RouteType = routeType;
 		Snippet = snippet;

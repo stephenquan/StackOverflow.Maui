@@ -28,6 +28,7 @@ public static class MauiProgram
 		AppViewModel.Current.RegisterSample(
 			"63922234",
 			DateTime.Parse("2020-09-16"),
+			DateTime.Parse("2023-09-17"),
 			$"{nameof(SO63922234)}_{nameof(SO63922234.MainPage)}",
 			typeof(SO63922234.MainPage),
 			"IMarkupExtension with bindable properties",
