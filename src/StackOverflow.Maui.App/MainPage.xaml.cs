@@ -16,7 +16,14 @@ public partial class MainPage : ContentPage
 	async void OnNavigate(object? sender, EventArgs e)
 	{
 		Button btn = (Button)sender!;
-		AppViewModel.Current.SelectedSample = (Sample)btn.BindingContext!;
-		await Shell.Current.GoToAsync($"{nameof(SO63922234)}_{nameof(SO63922234.MainPage)}");
+		if (btn.BindingContext is Sample sample)
+		{
+			AppViewModel.Current.SelectedSample = sample;
+			await Shell.Current.GoToAsync(sample.Route);
+		}
+		else
+		{
+			AppViewModel.Current.SelectedSample = null;
+		}
 	}
 }
