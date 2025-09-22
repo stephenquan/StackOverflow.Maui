@@ -3,7 +3,7 @@
 
 using SQuan.Helpers.Maui.Mvvm;
 
-namespace StackOverflow.Maui.SO74319669;
+namespace StackOverflow.Maui.App.SO74319669;
 
 /// <summary>Provides a markup extension for creating a color binding based on RGB values.</summary>
 [ContentProperty(nameof(R))]

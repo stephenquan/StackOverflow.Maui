@@ -3,12 +3,12 @@
 
 using SQuan.Helpers.Maui.Mvvm;
 
-namespace StackOverflow.Maui.SO75572430;
+namespace StackOverflow.Maui.App.SO75572430;
 
 /// <summary>
 /// A page that demonstrates how to concatenate formatted text with bindable properties in .NET MAUI.
 /// </summary>
-public partial class MainPage : ContentPage
+public partial class MainPage : BasePage
 {
 	/// <summary>
 	/// Gets or sets the text for the first action row.

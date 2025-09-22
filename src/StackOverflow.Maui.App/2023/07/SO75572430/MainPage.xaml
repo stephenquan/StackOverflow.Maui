@@ -1,19 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-    x:Class="StackOverflow.Maui.SO75572430.MainPage"
+<local:BasePage
+    x:Class="StackOverflow.Maui.App.SO75572430.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:StackOverflow.Maui.App"
-    xmlns:so75572430="clr-namespace:StackOverflow.Maui.SO75572430"
-    Title="{Binding SelectedSample.TitleText, Source={x:Static local:AppViewModel.Current}, x:DataType='local:AppViewModel'}"
+    xmlns:so75572430="clr-namespace:StackOverflow.Maui.App.SO75572430"
     x:DataType="so75572430:MainPage">
-
-    <ScrollView>
-        <VerticalStackLayout Padding="30,30,30,30" Spacing="25">
-
-            <Label FormattedText="{Binding FormattedFirstActionRowText}" />
-
-        </VerticalStackLayout>
-    </ScrollView>
-
-</ContentPage>
+    <VerticalStackLayout Spacing="25">
+        <Label FormattedText="{Binding FormattedFirstActionRowText}" />
+    </VerticalStackLayout>
+</local:BasePage>

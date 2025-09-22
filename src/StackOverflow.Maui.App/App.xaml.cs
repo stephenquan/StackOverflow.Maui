@@ -1,4 +1,6 @@
-﻿
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
+
 using System.Globalization;
 using CsvHelper;
 
@@ -46,7 +48,7 @@ public partial class App : Application
 				&& DateTime.Parse(record.Created) is DateTime created
 				&& DateTime.Parse(record.Answered) is DateTime answered
 				&& $"SO{record.Id}_MainPage" is string route
-				&& assembly.GetType($"StackOverflow.Maui.SO{record.Id}.MainPage") is Type routeType
+				&& assembly.GetType($"StackOverflow.Maui.App.SO{record.Id}.MainPage") is Type routeType
 				&& record.Title is string title
 				&& !string.IsNullOrEmpty(title)
 				&& record.Description is string description

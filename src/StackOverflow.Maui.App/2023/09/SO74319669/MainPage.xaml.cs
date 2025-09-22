@@ -3,11 +3,11 @@
 
 using SQuan.Helpers.Maui.Mvvm;
 
-namespace StackOverflow.Maui.SO74319669;
+namespace StackOverflow.Maui.App.SO74319669;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-public partial class MainPage : ContentPage
+public partial class MainPage : BasePage
 {
 	[ObservableProperty] public partial double RedValue { get; set; } = 0.5;
 	[ObservableProperty] public partial double GreenValue { get; set; } = 0.0;

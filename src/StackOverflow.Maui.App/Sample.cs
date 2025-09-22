@@ -57,8 +57,21 @@ public class Sample
 		{
 			FormattedString fs = new();
 			Span span;
-			fs.Spans.Add(span = new Span { Text = "View " });
-			fs.Spans.Add(span = new Span { Text = $"{TitleText} on StackOverflow", TextColor = Colors.Blue, TextDecorations = TextDecorations.Underline });
+			fs.Spans.Add(span = new Span
+			{
+				Text = "View ",
+				FontFamily = "Arial",
+				FontSize = 14,
+			});
+			fs.Spans.Add(
+				span = new Span
+				{
+					Text = $"{TitleText} on StackOverflow",
+					TextColor = Colors.Blue,
+					TextDecorations = TextDecorations.Underline,
+					FontFamily = "Arial",
+					FontSize = 14,
+				});
 			span.GestureRecognizers.Add(new TapGestureRecognizer
 			{
 				Command = new Command(async () =>

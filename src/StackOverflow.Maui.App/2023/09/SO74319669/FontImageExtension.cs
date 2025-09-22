@@ -3,7 +3,7 @@
 
 using SQuan.Helpers.Maui.Mvvm;
 
-namespace StackOverflow.Maui.SO74319669;
+namespace StackOverflow.Maui.App.SO74319669;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
