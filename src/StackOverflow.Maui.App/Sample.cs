@@ -1,4 +1,7 @@
-﻿namespace StackOverflow.Maui.App;
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
+
+namespace StackOverflow.Maui.App;
 
 /// <summary>
 /// Represents a sample class with no specific functionality.
@@ -33,7 +36,7 @@ public class Sample
 	/// <summary>
 	/// Gets or sets the snippet which is a short description of the sample.
 	/// </summary>
-	public string Snippet { get; set; } = string.Empty;
+	public string Title { get; set; } = string.Empty;
 
 	/// <summary>
 	/// Gets or sets the description which is a long description of the sample.
@@ -43,7 +46,7 @@ public class Sample
 	/// <summary>
 	/// Gets a summary text that can be used for page titles.
 	/// </summary>
-	public string TitleText => $"{Id} {Snippet}";
+	public string TitleText => $"{Id} {Title}";
 
 	/// <summary>
 	/// Gets the link text to view the question on StackOverflow.
@@ -78,16 +81,16 @@ public class Sample
 	/// <param name="answered"></param>"
 	/// <param name="route"></param>
 	/// <param name="routeType"></param>
-	/// <param name="snippet"></param>
+	/// <param name="title"></param>
 	/// <param name="description"></param>
-	public Sample(string id, DateTime created, DateTime answered, string route, Type routeType, string snippet, string description)
+	public Sample(string id, DateTime created, DateTime answered, string route, Type routeType, string title, string description)
 	{
 		Id = id;
 		Created = created;
 		Answered = answered;
 		Route = route;
 		RouteType = routeType;
-		Snippet = snippet;
+		Title = title;
 		Description = description;
 	}
 }

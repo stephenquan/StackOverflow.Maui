@@ -1,0 +1,3 @@
+﻿Id,Created,Answered,Title,Description
+63922234,2020-09-16,2023-09-17,IMarkupExtension with bindable properties,Demonstrates how to use a custom MarkupExtension to create a FontImageSource with bindable properties.
+74319669,2022-11-04,2023-09-17,How to create markup extensions having bindable properties?,Demonstrates how to use a custom MarkupExtension to create a RgbColorExtension with bindable properties.

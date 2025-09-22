@@ -1,4 +1,8 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
+
+using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace StackOverflow.Maui.App;
 
@@ -21,7 +25,7 @@ public partial class AppViewModel : ObservableObject
 	/// <summary>
 	/// Gets the list of samples.
 	/// </summary>
-	public List<Sample> Samples { get; } = [];
+	public ObservableCollection<Sample> Samples { get; } = [];
 
 	/// <summary>
 	/// Adds a new sample to the collection with the specified route, type, and description.

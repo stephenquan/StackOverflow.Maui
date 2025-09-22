@@ -1,4 +1,7 @@
-﻿using CommunityToolkit.Maui;
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
+
+using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 
 namespace StackOverflow.Maui.App;
@@ -22,17 +25,6 @@ public static class MauiProgram
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
-
-		Routing.RegisterRoute($"{nameof(SO63922234)}_{nameof(SO63922234.MainPage)}", typeof(SO63922234.MainPage));
-
-		AppViewModel.Current.RegisterSample(
-			"63922234",
-			DateTime.Parse("2020-09-16"),
-			DateTime.Parse("2023-09-17"),
-			$"{nameof(SO63922234)}_{nameof(SO63922234.MainPage)}",
-			typeof(SO63922234.MainPage),
-			"IMarkupExtension with bindable properties",
-			"Demonstrates how to use a custom MarkupExtension to create a FontImageSource with bindable properties.");
 
 		return builder.Build();
 	}

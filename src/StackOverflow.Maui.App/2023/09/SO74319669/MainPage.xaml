@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="StackOverflow.Maui.SO74319669.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:so74319669="clr-namespace:StackOverflow.Maui.SO74319669"
+    x:DataType="so74319669:MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="titleStyle" TargetType="Label">
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+            <Style x:Key="valueStyle" TargetType="Label">
+                <Setter Property="Grid.Column" Value="1" />
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+            <Style TargetType="Slider">
+                <Setter Property="Grid.Column" Value="2" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <Grid ColumnDefinitions="80,60,*" ColumnSpacing="5">
+                <Label Style="{StaticResource titleStyle}" Text="Red" />
+                <Label Style="{StaticResource valueStyle}" Text="{Binding RedValue, StringFormat='{}{0:N3}'}" />
+                <Slider Maximum="1" Value="{Binding RedValue, Mode=TwoWay}" />
+            </Grid>
+            <Grid ColumnDefinitions="80,60,*" ColumnSpacing="5">
+                <Label Style="{StaticResource titleStyle}" Text="Green" />
+                <Label Style="{StaticResource valueStyle}" Text="{Binding GreenValue, StringFormat='{}{0:N3}'}" />
+                <Slider Maximum="1" Value="{Binding GreenValue, Mode=TwoWay}" />
+            </Grid>
+            <Grid ColumnDefinitions="80,60,*" ColumnSpacing="5">
+                <Label Style="{StaticResource titleStyle}" Text="Blue" />
+                <Label Style="{StaticResource valueStyle}" Text="{Binding BlueValue, StringFormat='{}{0:N3}'}" />
+                <Slider Maximum="1" Value="{Binding BlueValue, Mode=TwoWay}" />
+            </Grid>
+            <Grid ColumnDefinitions="80,60,*" ColumnSpacing="5">
+                <Label Style="{StaticResource titleStyle}" Text="Alpha" />
+                <Label Style="{StaticResource valueStyle}" Text="{Binding AlphaValue, StringFormat='{}{0:N3}'}" />
+                <Slider Maximum="1" Value="{Binding AlphaValue, Mode=TwoWay}" />
+            </Grid>
+            <Grid ColumnDefinitions="80,60,*" ColumnSpacing="5">
+                <Label Style="{StaticResource titleStyle}" Text="IconName" />
+                <Label Style="{StaticResource valueStyle}" Text="{MultiBinding {Binding IconNameCode}, {Binding IconName}, StringFormat='{}{0} ({1})'}" />
+                <Slider
+                    Maximum="126"
+                    Minimum="32"
+                    Value="{Binding IconNameCode, Mode=TwoWay}" />
+            </Grid>
+            <Grid ColumnDefinitions="80,60,*" ColumnSpacing="5">
+                <Label Style="{StaticResource titleStyle}" Text="IconSize" />
+                <Label Style="{StaticResource valueStyle}" Text="{Binding IconSize, StringFormat='{}{0:N1}'}" />
+                <Slider
+                    Maximum="100"
+                    Minimum="5"
+                    Value="{Binding IconSize, Mode=TwoWay}" />
+            </Grid>
+            <Border HeightRequest="200" WidthRequest="200">
+                <Image
+                    HeightRequest="{Binding IconSize}"
+                    Source="{so74319669:FontImage IconName={Binding IconName},
+                                                  FontFamily='OpenSansRegular',
+                                                  Size={Binding IconSize},
+                                                  Color={so74319669:RgbColor R={Binding RedValue},
+                                                                             G={Binding GreenValue},
+                                                                             B={Binding BlueValue},
+                                                                             A={Binding AlphaValue}}}"
+                    WidthRequest="{Binding IconSize}" />
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
