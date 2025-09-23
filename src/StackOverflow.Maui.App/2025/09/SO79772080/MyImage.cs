@@ -19,6 +19,8 @@ public partial class MyImage : Image
 		{
 			switch (e.PropertyName)
 			{
+				case nameof(VisualElement.Width):
+				case nameof(VisualElement.Height):
 				case nameof(Image.Scale):
 					if (Scale > 1.0)
 					{

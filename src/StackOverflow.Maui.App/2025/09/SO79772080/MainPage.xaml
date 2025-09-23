@@ -22,12 +22,12 @@
             BackgroundColor="Blue">
             <Label Text="Hello!" />
         </Grid>
-        <Grid Grid.Row="0" Grid.Column="1">
-            <so79772080:MyImage
-                x:Name="_imgMap"
-                Aspect="AspectFit"
-                Source="dotnet_bot.png" />
-        </Grid>
+        <so79772080:MyImage
+            x:Name="_imgMap"
+            Grid.Row="0"
+            Grid.Column="1"
+            Aspect="AspectFit"
+            Source="dotnet_bot.png" />
         <Label
             Grid.Row="1"
             Grid.Column="1"
