@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="StackOverflow.Maui.App.SO79774725.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="MainPage">
+    <Grid RowDefinitions="*,Auto">
+        <ContentView x:Name="barcodeContentView" />
+        <Grid Grid.Row="1">
+            <Button
+                x:Name="BtSh"
+                Clicked="BtSh_Clicked"
+                IsVisible="False" />
+        </Grid>
+    </Grid>
+</ContentPage>
