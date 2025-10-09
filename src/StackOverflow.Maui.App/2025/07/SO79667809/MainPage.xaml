@@ -1,15 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="SO79667809.MainPage"
+    x:Class="StackOverflow.Maui.App.SO79667809.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:SO79667809"
-    x:DataType="local:MainPage">
+    xmlns:so79667809="clr-namespace:StackOverflow.Maui.App.SO79667809"
+    x:DataType="so79667809:MainPage">
 
     <ScrollView>
         <VerticalStackLayout Padding="30,0" Spacing="25">
 
-            <Entry
+            <Label Text="Test the NumericEntry below on an Android device to test comma is allowed on a numeric keypad." />
+
+            <so79667809:NumericEntry
                 Keyboard="Numeric"
                 Placeholder="LVK"
                 Text="{Binding LVK}" />

@@ -33,6 +33,8 @@ public static class MauiProgram
 		builder.Services.AddTransient<SO79745777.MainViewModel>();
 		builder.Services.AddTransient<SO79745777.IMessageService, SO79745777.DefaultMessageService>();
 
+		SO79667809.NumericEntry.ImplementNumericEntryHack();
+
 		return builder.Build();
 	}
 }
