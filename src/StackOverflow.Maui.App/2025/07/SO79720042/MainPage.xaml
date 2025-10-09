@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="StackOverflow.Maui.App.SO79720042.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:so79720042="clr-namespace:StackOverflow.Maui.App.SO79720042"
+    x:DataType="so79720042:MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="RatingButtonLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="TextColor" Value="{StaticResource Primary}" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="25">
+
+            <FlexLayout
+                AlignItems="Center"
+                Direction="Row"
+                JustifyContent="SpaceEvenly"
+                RadioButtonGroup.GroupName="{Binding GroupName}"
+                RadioButtonGroup.SelectedValue="{Binding Rating}">
+
+                <BindableLayout.ItemsSource>
+                    <x:Array Type="{x:Type x:Int32}">
+                        <x:Int32>1</x:Int32>
+                        <x:Int32>2</x:Int32>
+                        <x:Int32>3</x:Int32>
+                        <x:Int32>4</x:Int32>
+                        <x:Int32>5</x:Int32>
+                    </x:Array>
+                </BindableLayout.ItemsSource>
+                <BindableLayout.ItemTemplate>
+
+                    <DataTemplate x:DataType="x:Int32">
+                        <RadioButton x:Name="radioButton" Value="{Binding .}">
+                            <RadioButton.Content>
+                                <Grid x:DataType="x:Int32" BindingContext="{Binding BindingContext, x:DataType='RadioButton', Source={Reference radioButton}}">
+                                    <Label Style="{StaticResource RatingButtonLabel}" Text="{Binding .}" />
+                                </Grid>
+                            </RadioButton.Content>
+                        </RadioButton>
+                    </DataTemplate>
+
+                </BindableLayout.ItemTemplate>
+
+            </FlexLayout>
+
+            <Label HorizontalOptions="Center" Text="{Binding Rating, StringFormat:'Choosen rating: {0}'}" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,6 +1,9 @@
-﻿using SQuan.Helpers.Maui.Mvvm;
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
 
-namespace SO79720042;
+using SQuan.Helpers.Maui.Mvvm;
+
+namespace StackOverflow.Maui.App.SO79720042;
 
 /// <summary>
 /// 
