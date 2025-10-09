@@ -1,6 +1,9 @@
-﻿using SQuan.Helpers.Maui.Mvvm;
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
 
-namespace SO79738507;
+using SQuan.Helpers.Maui.Mvvm;
+
+namespace StackOverflow.Maui.App.SO79738507;
 
 /// <summary>
 /// Custom graphics view that implements IDrawable to draw a line graph based on float data.
