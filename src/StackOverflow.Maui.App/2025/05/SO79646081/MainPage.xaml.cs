@@ -1,4 +1,7 @@
-﻿namespace SO79646081;
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
+
+namespace StackOverflow.Maui.App.SO79646081;
 
 /// <summary>Represents the main page of the application.</summary>
 public partial class MainPage : ContentPage

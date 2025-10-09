@@ -1,6 +1,9 @@
-using SO79646081.Models;
+// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
 
-namespace SO79646081.Controls;
+using StackOverflow.Maui.App.SO79646081.Models;
+
+namespace StackOverflow.Maui.App.SO79646081.Controls;
 
 /// <summary>A custom view.</summary>
 public partial class RelatorioCamposPersonalizadosView : ContentView

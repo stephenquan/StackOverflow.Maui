@@ -1,6 +1,9 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
 
-namespace SO79646081.Models;
+using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace StackOverflow.Maui.App.SO79646081.Models;
 
 /// <summary>Represents a custom field with a title that can be observed for changes.</summary>
 public partial class CustomField : ObservableObject

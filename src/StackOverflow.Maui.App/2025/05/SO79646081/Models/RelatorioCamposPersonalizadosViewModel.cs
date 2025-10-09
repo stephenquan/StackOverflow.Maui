@@ -1,8 +1,11 @@
-﻿using System.Collections.ObjectModel;
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
+
+using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
-namespace SO79646081.Models;
+namespace StackOverflow.Maui.App.SO79646081.Models;
 
 /// <summary>
 /// Represents a view model.

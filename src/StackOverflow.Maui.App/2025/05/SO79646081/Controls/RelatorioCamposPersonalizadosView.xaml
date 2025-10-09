@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentView
-    x:Class="SO79646081.Controls.RelatorioCamposPersonalizadosView"
+    x:Class="StackOverflow.Maui.App.SO79646081.Controls.RelatorioCamposPersonalizadosView"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:controls="clr-namespace:SO79646081.Controls"
-    xmlns:models="clr-namespace:SO79646081.Models"
+    xmlns:controls="clr-namespace:StackOverflow.Maui.App.SO79646081.Controls"
+    xmlns:models="clr-namespace:StackOverflow.Maui.App.SO79646081.Models"
     x:Name="RootContentView"
     x:DataType="models:RelatorioCamposPersonalizadosViewModel">
     <Grid RowDefinitions="*,Auto">

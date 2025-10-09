@@ -3,6 +3,7 @@
 74319669,2022-11-04,2023-09-17,How to create markup extensions having bindable properties?,Demonstrates how to use a custom MarkupExtension to create a RgbColorExtension with bindable properties.
 75572430,2023-02-26,2023-07-30,Concatenate Bold Text with Binding Text in Maui Label,Shows how to use Label.FormattedText for cross-platform style.
 76746572,2023-07-23,2025-07-25,Not able to use custom fonts in .Net MAUI WebView,Demo of MS Comic Sans in a WebView.
+79646081,2025-05-30,2025-05-30,.NET MAUI: x:DataType in DataTemplate Blocks Access to Parent ViewModel Commands,Wrapping BindingContext with a strongly typed model to enable compiled-bindings.
 79696605,2025-07-10,2025-10-09,Can't pass bound view model as command parameter,Shows how subclassing can simplify binding issues.
 79717893,2025-07-28,2025-08-03,How to create a re-useable ContentView as a base view?,Demonstrates ContentPage.ControlTemplate.
 79720042,2025-07-30,2025-07-30,Binding Label Text to int value does not work inside a BindableLayout,Demonstrates RadioButton BindingContext fixes to RadioButton.Content.
