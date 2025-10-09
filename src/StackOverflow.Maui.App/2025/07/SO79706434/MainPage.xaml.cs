@@ -1,11 +1,18 @@
-﻿namespace SO79706434;
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
 
-#pragma warning disable CS1591 // Missing XML comments for publicly visible type or member
+namespace StackOverflow.Maui.App.SO79706434;
 
+/// <summary>
+/// Demonstrates a floating central button.
+/// </summary>
 public partial class MainPage : ContentPage
 {
 	int count = 0;
 
+	/// <summary>
+	/// Initializes a new instance of the <see cref="MainPage"/> class.
+	/// </summary>
 	public MainPage()
 	{
 		InitializeComponent();
