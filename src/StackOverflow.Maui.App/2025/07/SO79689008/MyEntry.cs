@@ -1,13 +1,20 @@
-﻿using Plugin.Maui.KeyListener;
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
 
-namespace SO79689008;
+using Plugin.Maui.KeyListener;
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+namespace StackOverflow.Maui.App.SO79689008;
 
+/// <summary>
+/// Custom Entry control that demonstrates handling keyboard input.
+/// </summary>
 public partial class MyEntry : Entry
 {
 	KeyboardBehavior keyboardBehavior = new();
 
+	/// <summary>
+	/// Initializes a new instance of the <see cref="MyEntry"/> class.
+	/// </summary>
 	public MyEntry()
 	{
 		keyboardBehavior.KeyDown += OnKeyDown;
