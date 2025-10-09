@@ -1,8 +1,11 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
+
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.Extensions.Logging;
 
-namespace SO79726492;
+namespace StackOverflow.Maui.App.SO79726492;
 
 #pragma warning disable CS1591 // Suppress warnings for missing XML comments
 

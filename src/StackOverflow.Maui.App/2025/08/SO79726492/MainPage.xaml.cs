@@ -1,4 +1,7 @@
-﻿namespace SO79726492;
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
+
+namespace StackOverflow.Maui.App.SO79726492;
 
 /// <summary>
 /// 
