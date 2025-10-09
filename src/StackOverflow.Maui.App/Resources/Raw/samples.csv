@@ -7,6 +7,7 @@
 79652049,2025-06-04,2025-06-04,How do I refresh the collection view after sorting the binding observable collection without recreating the collection,Showing different ways to sort a collection.
 79667809,2025-06-16,2025-06-17,.NET MAUI Numeric Entry accept dot and comma as decimal separator,Using a custom EntryHandler to allow alternate comma as a decimal sepaarator.
 79689008,2025-07-03,2025-07-11,Is there a way to intercept the return key on a MAUI editor?,Demonstrate applying KeyListener 3rd party package to Entry.
+79689989,2025-07-04,2025-07-06,.NET MAUI binding Label value with text from an List with specified index displays nothing,Attempt the x:DataType for accessing list of list of strings.
 79696605,2025-07-10,2025-10-09,Can't pass bound view model as command parameter,Shows how subclassing can simplify binding issues.
 79717893,2025-07-28,2025-08-03,How to create a re-useable ContentView as a base view?,Demonstrates ContentPage.ControlTemplate.
 79720042,2025-07-30,2025-07-30,Binding Label Text to int value does not work inside a BindableLayout,Demonstrates RadioButton BindingContext fixes to RadioButton.Content.
