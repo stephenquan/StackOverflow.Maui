@@ -1,6 +1,9 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
 
-namespace SO79735735;
+using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace StackOverflow.Maui.App.SO79735735;
 
 /// <summary>
 /// Simple model class that represents an item with a count.

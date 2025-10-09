@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="SO79735735.MainPage"
+    x:Class="StackOverflow.Maui.App.SO79735735.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:SO79735735"
-    x:DataType="local:MainPage">
+    xmlns:so79735735="clr-namespace:StackOverflow.Maui.App.SO79735735"
+    x:DataType="so79735735:MainPage">
     <CollectionView
         EmptyView="No Data"
         ItemSizingStrategy="MeasureFirstItem"
         ItemsSource="{Binding Items}"
         SelectionMode="Single">
         <CollectionView.ItemTemplate>
-            <DataTemplate x:DataType="local:ItemModel">
+            <DataTemplate x:DataType="so79735735:ItemModel">
                 <VerticalStackLayout>
                     <Grid
                         Padding="8,8,8,8"

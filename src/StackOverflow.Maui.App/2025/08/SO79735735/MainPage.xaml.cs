@@ -1,6 +1,9 @@
-﻿using System.Collections.ObjectModel;
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
 
-namespace SO79735735;
+using System.Collections.ObjectModel;
+
+namespace StackOverflow.Maui.App.SO79735735;
 
 /// <summary>
 /// Sample application demonstrating the use of an ObservableCollection with a decimal property.
