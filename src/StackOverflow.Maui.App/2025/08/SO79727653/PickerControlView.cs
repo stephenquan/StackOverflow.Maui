@@ -1,6 +1,10 @@
-using CommunityToolkit.Maui.Markup;
+// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
 
-namespace SO79727653;
+using CommunityToolkit.Maui.Markup;
+using SQuan.Helpers.Maui.Mvvm;
+
+namespace StackOverflow.Maui.App.SO79727653;
 
 /// <summary>
 /// This class represents a picker control view that allows users to select an item from a list.
@@ -9,34 +13,14 @@ namespace SO79727653;
 public partial class PickerControlView<T> : CommunityToolkit.Maui.Views.Popup<T>
 {
 	/// <summary>
-	/// Bindable property for <see cref="ItemsSource"/>.
-	/// </summary>
-	public static readonly BindableProperty ItemsSourceProperty =
-		BindableProperty.Create(nameof(ItemsSource), typeof(System.Collections.IEnumerable), typeof(PickerControlView<T>), null);
-
-	/// <summary>
 	/// Gets or sets the items source for the picker control view.
 	/// </summary>
-	public System.Collections.IEnumerable? ItemsSource
-	{
-		get => (System.Collections.IEnumerable)GetValue(ItemsSourceProperty);
-		set => SetValue(ItemsSourceProperty, value);
-	}
-
-	/// <summary>
-	/// Bindable property for <see cref="ItemTemplate"/>.
-	/// </summary>
-	public static readonly BindableProperty ItemTemplateProperty =
-		BindableProperty.Create(nameof(ItemTemplate), typeof(DataTemplate), typeof(PickerControlView<T>), default(DataTemplate));
+	[BindableProperty] public partial System.Collections.IEnumerable? ItemsSource { get; set; }
 
 	/// <summary>
 	/// Gets or sets the data template for the items in the picker control view.
 	/// </summary>
-	public DataTemplate? ItemTemplate
-	{
-		get => (DataTemplate)GetValue(ItemTemplateProperty);
-		set => SetValue(ItemTemplateProperty, value);
-	}
+	[BindableProperty] public partial DataTemplate? ItemTemplate { get; set; }
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="PickerControlView{T}"/> class.
@@ -46,7 +30,6 @@ public partial class PickerControlView<T> : CommunityToolkit.Maui.Views.Popup<T>
 		CollectionView clPickerView = new CollectionView { SelectionMode = SelectionMode.Single }
 			.Bind(CollectionView.ItemsSourceProperty, nameof(ItemsSource), BindingMode.OneWay, source: this)
 			.Bind(CollectionView.ItemTemplateProperty, nameof(ItemTemplate), BindingMode.OneWay, source: this);
-
 		clPickerView.SelectionChanged += async (s, e) =>
 		{
 			if (e.CurrentSelection is not null && e.CurrentSelection.Count >= 1 && e.CurrentSelection[0] is T selectedItem)
@@ -54,7 +37,6 @@ public partial class PickerControlView<T> : CommunityToolkit.Maui.Views.Popup<T>
 				await this.Dispatcher.DispatchAsync(async () => await this.CloseAsync(selectedItem));
 			}
 		};
-
 		this.Content = clPickerView;
 	}
 }

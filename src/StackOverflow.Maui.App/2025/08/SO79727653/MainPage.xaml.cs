@@ -1,8 +1,11 @@
-﻿using System.Globalization;
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
+
+using System.Globalization;
 using CommunityToolkit.Maui.Extensions;
 using CommunityToolkit.Maui.Markup;
 
-namespace SO79727653;
+namespace StackOverflow.Maui.App.SO79727653;
 
 /// <summary>
 /// Demonstrates a simple Maui app with a button that opens a picker control view.
