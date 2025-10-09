@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="SO79743710.MainPage"
+    x:Class="StackOverflow.Maui.App.SO79743710.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:SO79743710"
-    x:DataType="local:GPSViewModel">
+    xmlns:so79743710="clr-namespace:StackOverflow.Maui.App.SO79743710"
+    x:DataType="so79743710:GPSViewModel">
 
     <ScrollView>
         <VerticalStackLayout Padding="30,0" Spacing="25">
 
             <VerticalStackLayout
-                x:DataType="local:SerialDevice"
+                x:DataType="so79743710:SerialDevice"
                 BindingContext="{Binding CurrentDevice}"
                 Spacing="20">
 

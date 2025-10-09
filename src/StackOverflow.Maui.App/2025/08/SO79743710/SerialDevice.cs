@@ -1,6 +1,9 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
 
-namespace SO79743710;
+using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace StackOverflow.Maui.App.SO79743710;
 
 /// <summary>
 /// Represents a serial communication device with configurable baud rate settings.
