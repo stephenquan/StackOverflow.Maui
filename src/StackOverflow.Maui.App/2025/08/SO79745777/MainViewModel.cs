@@ -1,7 +1,10 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
+
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
-namespace SO79745777;
+namespace StackOverflow.Maui.App.SO79745777;
 
 /// <summary>
 /// Represents the main view model for the application.

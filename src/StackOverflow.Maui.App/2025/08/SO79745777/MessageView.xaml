@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentView
-    x:Class="SO79745777.MessageView"
+    x:Class="StackOverflow.Maui.App.SO79745777.MessageView"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:SO79745777"
+    xmlns:so79745777="clr-namespace:StackOverflow.Maui.App.SO79745777"
     x:Name="messageView">
     <Border
         Padding="5"
-        x:DataType="local:MessageView"
+        x:DataType="so79745777:MessageView"
         BindingContext="{Reference messageView}">
         <VerticalStackLayout Spacing="25">
             <Entry Text="{Binding Message, Mode=TwoWay}" />

@@ -1,4 +1,7 @@
-﻿namespace SO79745777;
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
+
+namespace StackOverflow.Maui.App.SO79745777;
 
 /// <summary>
 /// Provides a default implementation of the <see cref="IMessageService"/> interface for displaying messages.

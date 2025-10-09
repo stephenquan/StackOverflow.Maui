@@ -29,6 +29,10 @@ public static class MauiProgram
 		builder.Logging.AddDebug();
 #endif
 
+		builder.Services.AddTransient<SO79745777.MainPage>();
+		builder.Services.AddTransient<SO79745777.MainViewModel>();
+		builder.Services.AddTransient<SO79745777.IMessageService, SO79745777.DefaultMessageService>();
+
 		return builder.Build();
 	}
 }

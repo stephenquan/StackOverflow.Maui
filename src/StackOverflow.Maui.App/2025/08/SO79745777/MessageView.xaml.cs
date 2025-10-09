@@ -1,6 +1,9 @@
+// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
+
 using System.Windows.Input;
 
-namespace SO79745777;
+namespace StackOverflow.Maui.App.SO79745777;
 
 /// <summary>
 /// Represents a user interface component for composing and sending messages.
