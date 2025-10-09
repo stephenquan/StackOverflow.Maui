@@ -1,7 +1,10 @@
-﻿using CommunityToolkit.Maui.Markup;
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
+
+using CommunityToolkit.Maui.Markup;
 using SQuan.Helpers.Maui.Mvvm;
 
-namespace SO79652049;
+namespace StackOverflow.Maui.App.SO79652049;
 
 /// <summary>Represents a label that can be selected, with visual feedback based on its selection state.</summary>
 public partial class SelectableLabel : Label

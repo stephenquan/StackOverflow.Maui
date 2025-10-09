@@ -1,4 +1,7 @@
-﻿namespace SO79652049;
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
+
+namespace StackOverflow.Maui.App.SO79652049;
 
 /// <summary>
 /// Sample .NET MAUI application demonstrating the use of a sorted collection with a selected item.

@@ -1,12 +1,20 @@
-﻿using System.Collections.ObjectModel;
+﻿// Copyright (c) Stephen Quan.
+// Licensed under the MIT license.
+
+using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
-namespace SO79652049;
+namespace StackOverflow.Maui.App.SO79652049;
 
+/// <summary>
+/// ViewModel for managing a collection of user items and their selection state.
+/// </summary>
 public partial class ViewModel : ObservableObject
 {
-	/// <summary>Gets the collection of user items, each represented by an <see cref="ItemInfo"/> object.</summary>
+	/// <summary>
+	/// Gets the collection of user items, each represented by an <see cref="ItemInfo"/> object.
+	/// </summary>
 	public ObservableCollection<ItemInfo> UserItems { get; } =
 	[
 		new ItemInfo { Name = "Player 31415" },
@@ -14,13 +22,19 @@ public partial class ViewModel : ObservableObject
 		new ItemInfo { Name = "Player 58979" }
 	];
 
-	/// <summary>Gets a collection of user items sorted by their names in ascending order.</summary>
+	/// <summary>
+	/// Gets a collection of user items sorted by their names in ascending order.
+	/// </summary>
 	public ObservableCollection<ItemInfo> SortedUserItems => new ObservableCollection<ItemInfo>(UserItems.OrderBy(item => item.Name));
 
-	/// <summary>Gets or sets the currently selected item.</summary>
+	/// <summary>
+	/// Gets or sets the currently selected item.
+	/// </summary>
 	[ObservableProperty] public partial ItemInfo? SelectedItem { get; set; } = null;
 
-	/// <summary>Handles changes to the selected item by updating its selection state.</summary>
+	/// <summary>
+	/// Handles changes to the selected item by updating its selection state.
+	/// </summary>
 	partial void OnSelectedItemChanged(ItemInfo? oldValue, ItemInfo? newValue)
 	{
 		if (oldValue is not null) oldValue.IsSelected = false;
@@ -29,7 +43,9 @@ public partial class ViewModel : ObservableObject
 
 	Random random = new Random();
 
-	/// <summary>Adds a new user item to the collection and triggers an update to the sorted user items.</summary>
+	/// <summary>
+	/// Adds a new user item to the collection and triggers an update to the sorted user items.
+	/// </summary>
 	[RelayCommand]
 	public void AddAndSort()
 	{
