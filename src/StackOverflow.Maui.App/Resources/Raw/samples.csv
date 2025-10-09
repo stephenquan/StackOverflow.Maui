@@ -5,5 +5,6 @@
 79696605,2025-07-10,2025-10-09,Can't pass bound view model as command parameter,Shows how subclassing can simplify binding issues.
 79717893,2025-07-28,2025-08-03,How to create a re-useable ContentView as a base view?,Demonstrates ContentPage.ControlTemplate.
 79720042,2025-07-30,2025-07-30,Binding Label Text to int value does not work inside a BindableLayout,Demonstrates RadioButton BindingContext fixes to RadioButton.Content.
+79725472,2025-08-04,2025-08-05,IconImageSource and ToolbarItem not working as expected,Shows the DPI Font Size workaround needed for Windows.
 79772080,2025-09-23,2025-09-23,Why does my .NET MAUI image cross grid cell boundaries?,Shows how to use Grid and Image controls with scaling.
 79774725,2025-09-25,2025-10-08,MAUI ZXing.Net.Maui.Controls hide camera is not working,Shows how to use ContentView to control the visibility of CameraBarcodeReaderView.
