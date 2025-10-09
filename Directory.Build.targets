@@ -48,7 +48,10 @@
     <PackageReference Include="CommunityToolkit.Maui" Version="$(CommunityToolkitMauiVersion)" />
     <PackageReference Include="CommunityToolkit.Maui.Markup" Version="$(CommunityToolkitMauiMarkupVersion)" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
-    <PackageReference Include="SQuan.Helpers.Maui.Mvvm" Version="9.0.20" />
+    <PackageReference Include="CsvHelper" Version="33.1.0" />
+    <PackageReference Include="SQuan.Helpers.Maui.Mvvm" Version="9.0.22" />
+    <PackageReference Include="ZXing.Net.Maui.Controls" Version="0.5.2" />
+    <PackageReference Include="Plugin.Maui.KeyListener" Version="1.0.0-preview3" />
   </ItemGroup>
 
 </Project>

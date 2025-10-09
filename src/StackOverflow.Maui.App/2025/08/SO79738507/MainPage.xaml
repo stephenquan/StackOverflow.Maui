@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="StackOverflow.Maui.App.SO79738507.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:so79738507="clr-namespace:StackOverflow.Maui.App.SO79738507"
+    x:DataType="so79738507:MainViewModel">
+    <Grid RowDefinitions="*,Auto">
+        <Grid Padding="10">
+            <so79738507:MyGraphicsView x:Name="myGraphicsView" Data="{Binding DataHolder}" />
+        </Grid>
+        <Grid Grid.Row="1" Padding="10">
+            <Button Command="{Binding RefreshCommand}" Text="Click me" />
+        </Grid>
+    </Grid>
+</ContentPage>

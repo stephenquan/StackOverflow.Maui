@@ -1,0 +1,23 @@
+﻿Id,Created,Answered,Title,Description
+63922234,2020-09-16,2023-09-17,IMarkupExtension with bindable properties,Demonstrates how to use a custom MarkupExtension to create a FontImageSource with bindable properties.
+74319669,2022-11-04,2023-09-17,How to create markup extensions having bindable properties?,Demonstrates how to use a custom MarkupExtension to create a RgbColorExtension with bindable properties.
+75572430,2023-02-26,2023-07-30,Concatenate Bold Text with Binding Text in Maui Label,Shows how to use Label.FormattedText for cross-platform style.
+76746572,2023-07-23,2025-07-25,Not able to use custom fonts in .Net MAUI WebView,Demo of MS Comic Sans in a WebView.
+79646081,2025-05-30,2025-05-30,.NET MAUI: x:DataType in DataTemplate Blocks Access to Parent ViewModel Commands,Wrapping BindingContext with a strongly typed model to enable compiled-bindings.
+79652049,2025-06-04,2025-06-04,How do I refresh the collection view after sorting the binding observable collection without recreating the collection,Showing different ways to sort a collection.
+79667809,2025-06-16,2025-06-17,.NET MAUI Numeric Entry accept dot and comma as decimal separator,Using a custom EntryHandler to allow alternate comma as a decimal sepaarator.
+79689008,2025-07-03,2025-07-11,Is there a way to intercept the return key on a MAUI editor?,Demonstrate applying KeyListener 3rd party package to Entry.
+79689989,2025-07-04,2025-07-06,.NET MAUI binding Label value with text from an List with specified index displays nothing,Attempt the x:DataType for accessing list of list of strings.
+79696605,2025-07-10,2025-10-09,Can't pass bound view model as command parameter,Shows how subclassing can simplify binding issues.
+79706434,2025-07-18,2025-07-21,How to implement a floating central button in a .NET MAUI bottom navigation bar (.NET 9)?,Use Grids to position absolute and floating buttons.
+79717893,2025-07-28,2025-08-03,How to create a re-useable ContentView as a base view?,Demonstrates ContentPage.ControlTemplate.
+79720042,2025-07-30,2025-07-30,Binding Label Text to int value does not work inside a BindableLayout,Demonstrates RadioButton BindingContext fixes to RadioButton.Content.
+79725472,2025-08-04,2025-08-05,IconImageSource and ToolbarItem not working as expected,Shows the DPI Font Size workaround needed for Windows.
+79726492,2025-08-05,2025-08-05,MAUI MVVM partial method being called twice,Editor may fire additional OnTextChanged if newlines are different.
+79727653,2025-08-06,2025-08-07,.NET 9 MAUI Popup custom return raises an error,A demonstration of generic subclasses of MCT 12 Popups.
+79735735,2025-08-14,2025-08-15,.NET MAUI [ObservableProperty] decimal shows fixed decimals in UI — need fully dynamic decimal places (0–10),Not reproducible with the provided code snippets.
+79738507,2025-08-18,2025-08-21,Trouble binding data to an IDrawable,Reduce complexity by subclassing GraphicsView and adding the IDrawable interface.
+79743710,2025-08-22,2025-08-23,Set DataType in xaml to implemented Interface class,Setting the x:DataType to a more concrete type.
+79745777,2025-08-25,2025-08-29,Registration of Views and ViewModels with a parametered constructor in MAUI,Refactored ButtonView to decouple it from ButtonViewModel.
+79772080,2025-09-23,2025-09-23,Why does my .NET MAUI image cross grid cell boundaries?,Shows how to use Grid and Image controls with scaling.
+79774725,2025-09-25,2025-10-08,MAUI ZXing.Net.Maui.Controls hide camera is not working,Shows how to use ContentView to control the visibility of CameraBarcodeReaderView.

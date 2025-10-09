@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="StackOverflow.Maui.App.SO79689989.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:so79689989="clr-namespace:StackOverflow.Maui.App.SO79689989"
+    x:Name="this"
+    x:DataType="so79689989:MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="25">
+
+            <Entry BackgroundColor="PaleGreen" Text="{Binding 'LetsTry[0].[0]'}" />
+            <Entry BackgroundColor="PaleGoldenrod" Text="{Binding 'LetsTry[0].[1]'}" />
+            <Entry BackgroundColor="PaleTurquoise" Text="{Binding 'LetsTry[0].[2]'}" />
+
+            <VerticalStackLayout
+                x:DataType="so79689989:ListOfStrings"
+                BindingContext="{Binding LetsTry[0], x:DataType='so79689989:MainPage', Source={x:Reference this}}"
+                Spacing="25">
+                <Entry BackgroundColor="PaleGreen" Text="{Binding [0]}" />
+                <Entry BackgroundColor="PaleGoldenrod" Text="{Binding [1]}" />
+                <Entry BackgroundColor="PaleTurquoise" Text="{Binding [2]}" />
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

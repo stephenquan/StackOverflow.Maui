@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="StackOverflow.Maui.App.BasePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:StackOverflow.Maui.App"
+    Shell.NavBarIsVisible="False">
+    <ContentPage.ControlTemplate>
+        <ControlTemplate>
+            <ScrollView>
+                <VerticalStackLayout Padding="0,0,0,200">
+                    <VerticalStackLayout
+                        Padding="20"
+                        BackgroundColor="#eee"
+                        Spacing="20">
+                        <Label
+                            FontFamily="Arial Bold"
+                            FontSize="18"
+                            Text="{Binding SelectedSample.TitleText, Source={x:Static local:AppViewModel.Current}, x:DataType='local:AppViewModel'}" />
+                        <Label
+                            FontFamily="Arial"
+                            FontSize="14"
+                            Text="{Binding SelectedSample.Description, Source={x:Static local:AppViewModel.Current}, x:DataType='local:AppViewModel'}" />
+                        <Label FormattedText="{Binding SelectedSample.LinkText, Source={x:Static local:AppViewModel.Current}, x:DataType='local:AppViewModel'}" />
+                    </VerticalStackLayout>
+
+                    <ContentPresenter Padding="20" />
+                </VerticalStackLayout>
+            </ScrollView>
+        </ControlTemplate>
+    </ContentPage.ControlTemplate>
+</ContentPage>

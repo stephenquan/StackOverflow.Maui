@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="StackOverflow.Maui.App.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:StackOverflow.Maui.App"
+    x:DataType="local:AppViewModel"
+    Shell.NavBarIsVisible="False">
+
+    <Grid>
+        <CollectionView ItemsSource="{Binding Samples}" SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="local:Sample">
+                    <Grid>
+                        <Grid
+                            Padding="8"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center">
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding Id}" />
+                                        <Span Text=" " />
+                                        <Span Text="{Binding Title}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Grid>
+                        <Button
+                            BackgroundColor="Transparent"
+                            Clicked="OnNavigate"
+                            Opacity="0.1"
+                            Text="{Binding Title}" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
+
+</ContentPage>
