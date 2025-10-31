@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="StackOverflow.Maui.App.SO72692504.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:so72692504="clr-namespace:StackOverflow.Maui.App.SO72692504"
+    Title="MainPage"
+    x:DataType="so72692504:MainViewModel">
+    <Grid RowDefinitions="Auto,*">
+        <VerticalStackLayout Padding="10" Spacing="10">
+            <Entry Text="{Binding NewFriendName}" />
+            <HorizontalStackLayout Spacing="10">
+                <Button Command="{Binding AddFriendCommand}" Text="Add" />
+                <Button Command="{Binding ClearFriendsCommand}" Text="Clear" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+        <CollectionView Grid.Row="1" ItemsSource="{Binding Friends}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="so72692504:Friend">
+                    <VerticalStackLayout Padding="10" Spacing="10">
+                        <Label Text="{Binding Name}" />
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
