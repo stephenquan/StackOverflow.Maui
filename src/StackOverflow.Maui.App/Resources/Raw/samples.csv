@@ -1,5 +1,6 @@
 ﻿Id,Created,Answered,Title,Description
 63922234,2020-09-16,2023-09-17,IMarkupExtension with bindable properties,Demonstrates how to use a custom MarkupExtension to create a FontImageSource with bindable properties.
+72692504,2022-06-20,2025-10-16,.Net Maui Binding ViewModel to SQLite database to populate CollectionView,A simple example of using SQLite in a MVVM pattern.
 74319669,2022-11-04,2023-09-17,How to create markup extensions having bindable properties?,Demonstrates how to use a custom MarkupExtension to create a RgbColorExtension with bindable properties.
 75572430,2023-02-26,2023-07-30,Concatenate Bold Text with Binding Text in Maui Label,Shows how to use Label.FormattedText for cross-platform style.
 76746572,2023-07-23,2025-07-25,Not able to use custom fonts in .Net MAUI WebView,Demo of MS Comic Sans in a WebView.

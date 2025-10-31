@@ -52,6 +52,7 @@
     <PackageReference Include="SQuan.Helpers.Maui.Mvvm" Version="9.0.22" />
     <PackageReference Include="ZXing.Net.Maui.Controls" Version="0.5.2" />
     <PackageReference Include="Plugin.Maui.KeyListener" Version="1.0.0-preview3" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
   </ItemGroup>
 
 </Project>
