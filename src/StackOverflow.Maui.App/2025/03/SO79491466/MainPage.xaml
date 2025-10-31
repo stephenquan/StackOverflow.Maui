@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="StackOverflow.Maui.App.SO79491466.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:so79491466="clr-namespace:StackOverflow.Maui.App.SO79491466"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Title="MainPage">
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="25">
+            <Label
+                HorizontalOptions="Center"
+                Text="Welcome to .NET MAUI!"
+                VerticalOptions="Center" />
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="25">
+                <ImageButton x:Name="globe" Source="globe_32x32.png">
+                    <ImageButton.Behaviors>
+                        <toolkit:IconTintColorBehavior TintColor="{Binding CommandParameter, Source={Button CommandParameter={DynamicResource PrimaryColor}, Parent={Reference globe}}, x:DataType=Button}" />
+                    </ImageButton.Behaviors>
+                </ImageButton>
+
+                <ImageButton Source="globe_32x32.png">
+                    <ImageButton.Behaviors>
+                        <toolkit:IconTintColorBehavior TintColor="{so79491466:DynamicResourceAlt PrimaryColor}" />
+                    </ImageButton.Behaviors>
+                </ImageButton>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="25">
+                <Button
+                    Clicked="OnChangeButton"
+                    CommandParameter="{Color Red}"
+                    Text="Red" />
+                <Button
+                    Clicked="OnChangeButton"
+                    CommandParameter="{Color Green}"
+                    Text="Green" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

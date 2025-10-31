@@ -4,6 +4,7 @@
 74319669,2022-11-04,2023-09-17,How to create markup extensions having bindable properties?,Demonstrates how to use a custom MarkupExtension to create a RgbColorExtension with bindable properties.
 75572430,2023-02-26,2023-07-30,Concatenate Bold Text with Binding Text in Maui Label,Shows how to use Label.FormattedText for cross-platform style.
 76746572,2023-07-23,2025-07-25,Not able to use custom fonts in .Net MAUI WebView,Demo of MS Comic Sans in a WebView.
+79491466,2025-03-30,2025-10-31,using Dynamic Resource to change tintcolor in .net maui,Shows workarounds to the DynamicResource limitations
 79646081,2025-05-30,2025-05-30,.NET MAUI: x:DataType in DataTemplate Blocks Access to Parent ViewModel Commands,Wrapping BindingContext with a strongly typed model to enable compiled-bindings.
 79652049,2025-06-04,2025-06-04,How do I refresh the collection view after sorting the binding observable collection without recreating the collection,Showing different ways to sort a collection.
 79667809,2025-06-16,2025-06-17,.NET MAUI Numeric Entry accept dot and comma as decimal separator,Using a custom EntryHandler to allow alternate comma as a decimal sepaarator.
