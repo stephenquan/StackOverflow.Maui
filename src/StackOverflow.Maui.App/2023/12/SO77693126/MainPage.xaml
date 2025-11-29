@@ -42,10 +42,9 @@
     </ContentPage.Resources>
 
     <VerticalStackLayout>
-
         <HorizontalStackLayout HorizontalOptions="Center">
-            <RadioButton Content="Map" />
-            <RadioButton Content="List" />
+            <RadioButton Content="Map" GroupName="MapListGroup" />
+            <RadioButton Content="List" GroupName="MapListGroup" />
         </HorizontalStackLayout>
 
         <Label
